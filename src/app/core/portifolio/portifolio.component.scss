@@ -1,0 +1,19 @@
+.title{
+  display: flex; justify-content: center;
+  align-items: center;
+}
+
+.body{
+  display: flex; flex-wrap: wrap; justify-content: center;
+}
+
+.title-session1{
+  font-weight:500;
+  margin: 0;
+}
+
+.title-session2{
+  margin: 0px 0px 0px 10px;
+  color: rgb(183, 104, 235);
+  font-weight: 600;
+}

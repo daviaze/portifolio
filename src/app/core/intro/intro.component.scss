@@ -41,6 +41,10 @@
   color: white;
   font-size: 2rem; // Tamanho do ícone
   animation: float 2s ease-in-out infinite; // Adiciona a animação de flutuação
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
 }
 
 @keyframes float {

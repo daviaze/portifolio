@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ProgressComponent } from '../../widgets/progress/progress.component';
 import { MatButtonModule } from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon';
-import { RouterLink } from '@angular/router'
 import { ScrollSectionService } from '../../services/scroll-section.service';
 
 @Component({
-  selector: 'app-intro',
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.css'],
   standalone: true,
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss'],
-  imports: [MatButtonModule, MatIconModule, RouterLink],
+  imports: [ProgressComponent, MatButtonModule, MatIconModule]
 })
-export class IntroComponent implements OnInit {
+export class SkillsComponent implements OnInit {
 
   constructor(private scrollService: ScrollSectionService) {
 

@@ -7,8 +7,8 @@
       <br>
       <h2>Software Engineer</h2>
       <br>
-      <button mat-flat-button class="view-projects">View My Projects</button>
-      <mat-icon class="arrow-down" fontIcon="keyboard_arrow_down"></mat-icon>
+      <button (click)="this.scrollTo('portifolio')" mat-flat-button style="background-color: rgb(183, 104, 235)">View My Projects</button>
+        <mat-icon (click)="scrollTo('about')" class="arrow-down" fontIcon="keyboard_arrow_down"></mat-icon>
     </div>
 </div>
 

@@ -1,0 +1,26 @@
+// Reset básico para remover margens e paddings
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Remover a margem e padding do body, e garantir que o conteúdo ocupe a tela inteira
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #13151d;
+  color: #E8E8E8;
+  scroll-behavior: smooth;
+}
+
+.line{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(183, 104, 235);
+  margin: 10px;
+}
+
+
