@@ -8,11 +8,7 @@
   <br>
   <br>
   <div class="body">
-    <app-card-portifolio text="TESTE"></app-card-portifolio>
-    <app-card-portifolio text="TESTE 2"></app-card-portifolio>
-    <app-card-portifolio text="TESTE 2"></app-card-portifolio>
-    <app-card-portifolio text="TESTE 2"></app-card-portifolio>
-    <app-card-portifolio text="TESTE 2"></app-card-portifolio>
+      <app-card-portifolio *ngFor="let port of getPortifolios()" [portifolio]="port"></app-card-portifolio>
   </div>
   <div style="position: absolute; right: 10px; bottom: 155px; ">
     <button (click)="scrollTo('contact')" mat-fab style="background-color: rgb(183, 104, 235, 0.2)">

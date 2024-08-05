@@ -1,15 +1,10 @@
-<div class="container">
+<div (click)="openDialog('0ms', '0ms')" class="container">
   <div class="card">
     <div class="card-top">
-      <h1 style="color: white; font-weight: 500;">{{text}}</h1>
+      <h1 style="color: white; font-weight: 500;">{{portifolio.title}}</h1>
     </div>
     <div class="card-bottom">
-      <app-card-skills text="JavaScript"></app-card-skills>
-      <app-card-skills text="React"></app-card-skills>
-      <app-card-skills text="ReduxJs"></app-card-skills>
-      <app-card-skills text="MongoDb"></app-card-skills>
-      <app-card-skills text="MongoDb"></app-card-skills>
-      <app-card-skills text="MongoDb"></app-card-skills>
+      <app-card-skills *ngFor="let item of portifolio.tecnologies" [text]="item"></app-card-skills>
     </div>
   </div>
 </div>
