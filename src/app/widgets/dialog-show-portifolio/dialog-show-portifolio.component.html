@@ -1,8 +1,20 @@
-<h2 mat-dialog-title>Delete file</h2>
+<div class="container">
+  <div class="dialog-top">
+    <h2 mat-dialog-title>{{dialogRef.componentInstance.data.portifolio.title}}</h2>
+    <div class="example-button-container">
+      <button style="background-color: grey;" mat-mini-fab (click)="dialogRef.close()">
+        <mat-icon style="color: white;">close</mat-icon>
+      </button>
+    </div>
+  </div>
 <mat-dialog-content>
-  Would you like to delete cat.jpeg?
+  <div class="image">
+    <img style="width: 100%; height: 100%; border-radius: 10px;" src="../../../assets/imagem1.png">
+  </div>
+  <br>
+  <h2>{{dialogRef.componentInstance.data.portifolio.description}}</h2>
+  <br>
+  <p>Visão geral do projeto</p>
+  <p>{{dialogRef.componentInstance.data.portifolio.general}}</p>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>No</button>
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
-</mat-dialog-actions>
+</div>

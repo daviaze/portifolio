@@ -24,9 +24,13 @@ export class CardPortifolioComponent implements OnInit {
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(DialogShowPortifolioComponent, {
-      width: '250px',
+      width: '900px',
+      minWidth: '200px',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: {
+        portifolio: this.portifolio
+      }
     });
   }
 
