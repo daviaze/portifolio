@@ -1,20 +1,32 @@
 <div class="container">
   <div class="dialog-top">
     <h2 mat-dialog-title>{{dialogRef.componentInstance.data.portifolio.title}}</h2>
-    <div class="example-button-container">
-      <button style="background-color: grey;" mat-mini-fab (click)="dialogRef.close()">
+      <button class="button-close" mat-mini-fab (click)="dialogRef.close()">
         <mat-icon style="color: white;">close</mat-icon>
       </button>
-    </div>
   </div>
-<mat-dialog-content>
-  <div class="image">
-    <img style="width: 100%; height: 100%; border-radius: 10px;" src="../../../assets/imagem1.png">
-  </div>
-  <br>
+  <!--<img class="image" src="../../../assets/imagem1.png">-->
+<mat-dialog-content class="content">
   <h2>{{dialogRef.componentInstance.data.portifolio.description}}</h2>
-  <br>
-  <p>Visão geral do projeto</p>
-  <p>{{dialogRef.componentInstance.data.portifolio.general}}</p>
+    <div class="topics">
+      <h4>Visão geral do projeto</h4>
+      <p>{{dialogRef.componentInstance.data.portifolio.general}}</p>
+    </div>
+    <div>
+      <h4>Tecnologias Utilizadas</h4>
+      <p>{{dialogRef.componentInstance.data.portifolio.tecnologies.join(', ')}}</p>
+    </div>
+    <div>
+      <h4>Problema a ser resolvido</h4>
+      <p>{{dialogRef.componentInstance.data.portifolio.problemDescription}}</p>
+    </div>
+    <div>
+      <h4>Solução</h4>
+      <p>{{dialogRef.componentInstance.data.portifolio.solutionDescription}}</p>
+    </div>
+    <div>
+      <h4>Responsabilidades</h4>
+      <p>{{dialogRef.componentInstance.data.portifolio.responsibility}}</p>
+    </div>
 </mat-dialog-content>
 </div>

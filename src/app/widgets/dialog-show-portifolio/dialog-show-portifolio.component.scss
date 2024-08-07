@@ -1,11 +1,11 @@
 .container{
-    height: 95vh;
+    height: 90vh;
     background-color: #27272A;
     padding: 10px;
 }
 
 .image{
-    width: 100%;
+    width: 90%;
     padding: 3px;
     height: 420px;
 }
@@ -14,3 +14,36 @@
     display: flex;
     justify-content: space-between;
 }
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+h4, h2{
+  color: #F3F3F3;
+}
+
+p{
+  font-size: 14px;
+}
+
+.topics{
+  margin-bottom: 10px;
+}
+
+.button-close{
+  background-color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+  .button-close{
+    visibility: hidden;
+  }
+
+  .dialog-top{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+

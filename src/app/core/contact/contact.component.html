@@ -2,18 +2,18 @@
   <div class="body">
     <div style="display: flex; justify-content: center;">
       <div class="line"></div>
-      <div style="display: flex;">
-        <h1 class="title-session1">SEND A</h1>
-        <h1 class="title-session2">MESSAGE</h1>
+      <div style="display: flex;;">
+        <h1 class="title-session1">ENVIE UMA</h1>
+        <h1 class="title-session2">MENSAGEM</h1>
       </div>
       <div class="line"></div>
     </div>
     <br>
     <br>
-    <div style="display: flex; justify-content: space-between;">
+    <div class="container-body">
       <div class="form">
         <mat-form-field>
-          <mat-label>Name</mat-label>
+          <mat-label>Nome</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field>
@@ -21,30 +21,34 @@
           <input matInput>
         </mat-form-field>
         <mat-form-field >
-          <mat-label>Message</mat-label>
+          <mat-label>Mensagem</mat-label>
           <input matInput>
         </mat-form-field>
         <button mat-fab extended style="width: 140px; background-color: rgb(183, 104, 235); color: white;">
           <mat-icon>send</mat-icon>
-          Send
+          Enviar
         </button>
       </div>
       <div class="social">
-        <p>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
-          Simply fill the from and send me an email.</p>
+        <p>Se você deseja entrar em contato, falar sobre a colaboração de um projeto, uma proposta, ou apenas dizer oi, adoraria ouvir sua opinião.
+          Basta preencher o formulário e me enviar um e-mail.</p>
 
           <div style="display: flex;">
-            <button mat-fab style="background-color: rgb(183, 104, 235)">
-              <img src="assets/linkedin2.png" alt="App Icon" width="40" height="40">
-            </button>
-            <button mat-fab style="margin-left: 10px; background-color: rgb(183, 104, 235)">
-              <img src="assets/github2.png" alt="App Icon" width="40" height="40">
-            </button>
+            <a href="https://www.linkedin.com/in/davi-azevedo-3a62361a5/">
+              <button mat-fab style="background-color: rgb(183, 104, 235)">
+                <img src="assets/linkedin2.png" alt="App Icon" width="40" height="40">
+              </button>
+            </a>
+            <a href="https://github.com/daviaze">
+              <button mat-fab style="margin-left: 10px; background-color: rgb(183, 104, 235)">
+                <img src="assets/github2.png" alt="App Icon" width="40" height="40">
+              </button>
+            </a>
           </div>
       </div>
     </div>
   </div>
-  <div style="position: absolute; right: 10px; bottom: 10px; ">
+  <div style="position: absolute; right: 20px; bottom: 10px; ">
     <button (click)="scrollTo('intro')" mat-fab style="background-color: rgb(183, 104, 235, 0.2)">
               <mat-icon fontIcon="keyboard_double_arrow_up"></mat-icon>
             </button>

@@ -1,14 +1,26 @@
 .container{
   width: 500px;
-  height: 15px;
-  background-color: white;
+  height: 10px;
+  background-color: transparent;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
+
 
 .details{
   width: 500px;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 300px;
+  }
+
+  .details{
+    width: 300px;
+  }
 }
 
   .progress{
