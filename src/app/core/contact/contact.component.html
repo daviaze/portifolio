@@ -11,27 +11,27 @@
     <br>
     <br>
     <div class="container-body">
-      <div class="form">
+      <form [formGroup]="contactForm" class="form" (ngSubmit)="sendEmail($event)">
         <mat-form-field>
-          <mat-label>Nome</mat-label>
-          <input matInput>
+          <mat-label for="name">Nome</mat-label>
+          <input  type="text" name="user_name" formControlName="name" matInput required>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>Email</mat-label>
-          <input matInput>
+          <mat-label for="email">Email</mat-label>
+          <input  type="email" name="user_email" formControlName="email" matInput required>
         </mat-form-field>
-        <mat-form-field >
-          <mat-label>Mensagem</mat-label>
-          <input matInput>
+        <mat-form-field>
+          <mat-label for="message">Mensagem</mat-label>
+          <textarea matInput type="text" name="message" formControlName="message" matInput required></textarea>
         </mat-form-field>
-        <button mat-fab extended style="width: 140px; background-color: rgb(183, 104, 235); color: white;">
+        <button  type="submit" mat-fab extended style="width: 140px; background-color: rgb(183, 104, 235); color: white;">
           <mat-icon>send</mat-icon>
           Enviar
         </button>
-      </div>
+      </form>
       <div class="social">
         <p>Se você deseja entrar em contato, falar sobre a colaboração de um projeto, uma proposta, ou apenas dizer oi, adoraria ouvir sua opinião.
-          Basta preencher o formulário e me enviar um e-mail.</p>
+          Basta preencher o formulário e me enviar um e-mail. Segue abaixo as minhas redes sociais.</p>
 
           <div style="display: flex;">
             <a href="https://www.linkedin.com/in/davi-azevedo-3a62361a5/">
@@ -50,7 +50,7 @@
   </div>
   <div style="position: absolute; right: 20px; bottom: 10px; ">
     <button (click)="scrollTo('intro')" mat-fab style="background-color: rgb(183, 104, 235, 0.2)">
-              <mat-icon fontIcon="keyboard_double_arrow_up"></mat-icon>
-            </button>
+      <mat-icon fontIcon="keyboard_double_arrow_up"></mat-icon>
+    </button>
   </div>
 </div>
