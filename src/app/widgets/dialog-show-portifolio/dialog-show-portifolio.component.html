@@ -2,7 +2,7 @@
   <div class="dialog-top">
     <h2 mat-dialog-title>{{dialogRef.componentInstance.data.portifolio.title}}</h2>
       <button class="button-close" mat-mini-fab (click)="dialogRef.close()">
-        <mat-icon style="color: white;">close</mat-icon>
+        <mat-icon style="color: rgb(183, 104, 235);">close</mat-icon>
       </button>
   </div>
   <!--<img class="image" src="../../../assets/imagem1.png">-->
@@ -12,9 +12,9 @@
       <h4>Visão geral do projeto</h4>
       <p>{{dialogRef.componentInstance.data.portifolio.general}}</p>
     </div>
-    <div>
+    <div style="margin-bottom: 15px;">
       <h4>Tecnologias Utilizadas</h4>
-      <p>{{dialogRef.componentInstance.data.portifolio.tecnologies.join(', ')}}</p>
+      <app-card-skills *ngFor="let item of dialogRef.componentInstance.data.portifolio.tecnologies" [text]="item"></app-card-skills>
     </div>
     <div>
       <h4>Problema a ser resolvido</h4>

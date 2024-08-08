@@ -6,6 +6,7 @@ export interface Portifolio {
   problemDescription: string;
   solutionDescription: string;
   responsibility: string;
+  sourcesImages: string[];
 }
 
 export function getAllPortifolio(): Portifolio[] {
@@ -17,7 +18,10 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["C#", ".NET", "Work Service", "Windows Forms", "Dapper", "Firebird"],
       "problemDescription": "O cliente tinha dificuldade em competir com preços de grandes mercados.",
       "solutionDescription": "Foi projetado para possibilitar o cliente ter mais oportunidades e promoções vindas diretas das grandes marcas, concedendo bonificação e outros benefícios.",
-      "responsibility": "Análise e desenvolvimento."
+      "responsibility": "Análise e desenvolvimento.",
+      "sourcesImages": ["../../../assets/csharp.png",
+        "../../../assets/dotnet-primary.png"
+      ]
     },
     {
       "title": "Integração com Contabilidade",
@@ -26,7 +30,8 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["C#", ".NET", "Work Service", "API", "Dapper", "Firebird"],
       "problemDescription": "Os contadores do cliente tinham dificuldade em obter os XMLS de forma mais fácil e prática.",
       "solutionDescription": "Foi projetado para possibilitar os contadores terem mais comodidade e praticidade na hora de fechar a contabilidade do cliente.",
-      "responsibility": "Análise e desenvolvimento"
+      "responsibility": "Análise e desenvolvimento",
+      "sourcesImages": ["../../../assets/csharp.png", "../../../assets/dotnet-primary.png"]
     },
     {
       "title": "Integração com E-commerce",
@@ -35,7 +40,8 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["C#", ".NET", "Work Service", "Dapper", "Firebird"],
       "problemDescription": "O cliente queria otimizar seu gerenciamento com os produtos e pedidos do site.",
       "solutionDescription": "Foi projetado para possibilitar que o gerenciamento do site fosse todo feito através da própria retaguarda do cliente, mandando todas as atualizações via API para o site, tendo assim um gerenciamento mais centralizado.",
-      "responsibility": "Análise e desenvolvimento"
+      "responsibility": "Análise e desenvolvimento",
+      "sourcesImages": ["../../../assets/csharp.png", "../../../assets/dotnet-primary.png"]
     },
     {
       "title": "API Emissão de Nota",
@@ -44,7 +50,8 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["C#", ".NET", "API", "Dapper", "Firebird"],
       "problemDescription": "O intuito foi centralizar o sistema de emissão de nota em um servidor em nuvem, para que mais aplicações possam integrar com a emissão de forma mais padronizada e conscisa.",
       "solutionDescription": "Foi projetado essa API para melhorar a integração, documentação e manutenção.",
-      "responsibility": "Análise e desenvolvimento"
+      "responsibility": "Análise e desenvolvimento",
+      "sourcesImages": ["../../../assets/csharp.png", "../../../assets/dotnet-primary.png"]
     },
     {
       "title": "API PIX",
@@ -53,7 +60,8 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["C#", ".NET", "API", "FireBase"],
       "problemDescription": "Alguns clientes tinham dificuldade em conseguir boas propostas de bancos para PIX no TEF, com isso preferiam não vender no PIX, assim perdendo mercado.",
       "solutionDescription": "Foi projetado essa API para melhorar sua disputa no mercado integrando com bancos digitais.",
-      "responsibility": "Análise e desenvolvimento"
+      "responsibility": "Análise e desenvolvimento",
+      "sourcesImages": ["../../../assets/csharp.png", "../../../assets/dotnet-primary.png"]
     },
     {
       "title": "App para Pré-venda",
@@ -62,7 +70,8 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["Dart", "Flutter", "FireBase", "C#", ".NET", "Dapper", "Firebird"],
       "problemDescription": "O cliente ia de porta em porta realizando os pedidos no papel e chegando no estabelecimento passava para o sistema gerencial manualmente. Portanto, o cliente queria ter mais praticidade.",
       "solutionDescription": "Foi projetado esse projeto para possibilitar que o cliente tenha mais praticidade e comodidade, além de ter todos os registros salvos em histórico.",
-      "responsibility": "Análise e desenvolvimento Full-Stack"
+      "responsibility": "Análise e desenvolvimento Full-Stack",
+      "sourcesImages": ["../../../assets/flutter.png"]
     },
     {
       "title": "App Eventos",
@@ -71,7 +80,8 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["Dart", "Flutter", "FireBase"],
       "problemDescription": "Esse projeto foi um trabalho freelancer.",
       "solutionDescription": "Esse projeto foi um trabalho freelancer.",
-      "responsibility": "Análise e desenvolvimento Full-Stack"
+      "responsibility": "Análise e desenvolvimento Full-Stack",
+      "sourcesImages": ["../../../assets/flutter.png"]
     },
     {
       "title": "App Agenda ",
@@ -80,7 +90,8 @@ export function getAllPortifolio(): Portifolio[] {
       "tecnologies": ["Dart", "Flutter", "FireBase"],
       "problemDescription": "Esse projeto foi um trabalho freelancer.",
       "solutionDescription": "Esse projeto foi um trabalho freelancer.",
-      "responsibility": "Análise e desenvolvimento Full-Stack"
+      "responsibility": "Análise e desenvolvimento Full-Stack",
+      "sourcesImages": ["../../../assets/flutter.png"]
     }
   ];
 }

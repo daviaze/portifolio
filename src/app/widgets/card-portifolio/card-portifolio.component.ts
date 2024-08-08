@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
 export class CardPortifolioComponent implements OnInit {
   @Input() portifolio: Portifolio = {description: "teste", general: "teste",
      problemDescription: "teste", responsibility: "teste",
-      solutionDescription: "teste", tecnologies: ["teste"], title: "teste"};
+      solutionDescription: "teste", tecnologies: ["teste"], title: "teste", sourcesImages: []};
 
   constructor(public dialog: MatDialog) { }
 

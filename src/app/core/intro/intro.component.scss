@@ -47,6 +47,71 @@
   padding: 5px;
 }
 
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0; // Move o fundo ao longo do eixo X
+  }
+}
+
+.button-projects{
+  background:
+    rgb(183, 104, 235);
+
+  background-size: 200% 100%; // Amplia o fundo para a animação de movimento
+  animation: wave 5s linear infinite; // Animação de movimento de onda
+  position: relative;
+  overflow: hidden; // Para conter o pseudo-elemento
+  border-radius: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: colorChange 2s infinite alternate;
+
+  &:hover {
+    transform: scale(0.95);
+    animation: none;
+    background-color: rgb(183, 104, 235); // Mantém a cor sólida ao passar o mouse
+  }
+
+  @keyframes colorChange {
+    0% {
+      background-color: rgb(183, 104, 235);
+    }
+    100% {
+      background-color: rgb(143, 74, 205); // Cor mais escura
+    }
+  }
+}
+
+.button-contact{
+  background-color: transparent;
+  border: 1px solid rgb(183, 104, 235);
+  border-radius: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;  // Transição de 300ms
+
+  &:hover {
+    transform: scale(0.95); // Diminui o tamanho do botão ao clicar
+    background-color: rgb(183, 104, 235);
+  }
+}
+
+
+
 @keyframes float {
   0% {
     transform: translateY(0); // Começa na posição original

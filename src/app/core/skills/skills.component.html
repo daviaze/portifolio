@@ -1,12 +1,13 @@
-<div class="container">
+<div class="container" [@foobar]="state">
   <div class="body">
-    <div style="display: flex; justify-content: center;">
+      <div style="display: flex; justify-content: center;">
       <div class="line"></div>
-      <h1 class="title-session1">SKILLS</h1>
+      <h1 class="title-session1">Skills</h1>
       <div class="line"></div>
     </div>
     <br>
     <br>
+    <!--
     <div style="display: flex; flex-wrap: wrap;
      justify-content: space-evenly; align-items: start;">
       <app-progress text="C#" percent="95%"></app-progress>
@@ -17,6 +18,17 @@
       <app-progress text="ANGULAR" percent="75%"></app-progress>
       <app-progress text="SOLID" percent="75%"></app-progress>
       <app-progress text="SCRUM" percent="95%"></app-progress>
+    </div>-->
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+      <app-card-tecnologies text=".NET" src="../../../assets/dotnet-primary.png"></app-card-tecnologies>
+      <app-card-tecnologies text="C#" src="../../../assets/csharp.png"></app-card-tecnologies>
+      <app-card-tecnologies text="Entity Framework" src="../../../assets/orm.png"></app-card-tecnologies>
+      <app-card-tecnologies text="XUnit" src="../../../assets/test.png"></app-card-tecnologies>
+      <app-card-tecnologies text="Flutter" src="../../../assets/flutter.png"></app-card-tecnologies>
+      <app-card-tecnologies text="Angular" src="../../../assets/angular.png"></app-card-tecnologies>
+      <app-card-tecnologies text="SOLID" src="../../../assets/solid.png"></app-card-tecnologies>
+      <app-card-tecnologies text="SCRUM" src="../../../assets/scrum.png"></app-card-tecnologies>
     </div>
   </div>
   <!--<div style="position: absolute; right: 10px; bottom: 10px; ">

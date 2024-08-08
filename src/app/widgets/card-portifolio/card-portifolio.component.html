@@ -1,7 +1,12 @@
 <div class="container">
   <div (click)="openDialog('0ms', '0ms')" class="card">
     <div class="card-top">
-      <h1 style="color: white; font-weight: 500;">{{portifolio.title}}</h1>
+      <div style="display: flex; flex-direction: column;">
+        <h1 style="color: white; font-weight: 500;">{{portifolio.title}}</h1>
+        <div style="display: flex; justify-content: center;">
+          <img  *ngFor="let icon of portifolio.sourcesImages" [src]="icon" style="width: 20px; margin-right: 7px;">
+        </div>
+      </div>
     </div>
     <div class="card-bottom">
       <app-card-skills *ngFor="let item of portifolio.tecnologies" [text]="item"></app-card-skills>

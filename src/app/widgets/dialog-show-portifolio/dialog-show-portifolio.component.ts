@@ -9,13 +9,16 @@ import {
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
+import { CardSkillsComponent } from "../card-skills/card-skills.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dialog-show-portifolio',
   templateUrl: './dialog-show-portifolio.component.html',
   styleUrls: ['./dialog-show-portifolio.component.scss'],
   standalone: true,
-  imports: [MatButtonModule, MatDialogActions, MatDialogClose, MatDialogTitle, MatDialogContent, MatIcon],
+  imports: [MatButtonModule, MatDialogActions, MatDialogClose,
+     MatDialogTitle, MatDialogContent, MatIcon, CardSkillsComponent, CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogShowPortifolioComponent implements OnInit {

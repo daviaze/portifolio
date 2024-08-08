@@ -1,32 +1,62 @@
-<div class="container">
+<div class="container" [@foobar]="state">
   <div class="body">
     <div style="display: flex; justify-content: center;">
       <div class="line"></div>
       <div style="display: flex;;">
-        <h1 class="title-session1">ENVIE UMA</h1>
-        <h1 class="title-session2">MENSAGEM</h1>
+        <h1 class="title-session1">Contatos</h1>
       </div>
       <div class="line"></div>
     </div>
     <br>
     <br>
     <div class="container-body">
-      <form [formGroup]="contactForm" class="form" (ngSubmit)="sendEmail($event)">
+      <form [formGroup]="contactForm" class="form" #formDir="ngForm" (ngSubmit)="sendEmail($event)">
         <mat-form-field>
           <mat-label for="name">Nome</mat-label>
           <input  type="text" name="user_name" formControlName="name" matInput required>
+            @if (contactForm.controls['name'].errors && (formDir.submitted || contactForm.controls["name"].touched)) {
+              @if (contactForm.controls['name'].errors['required']) {
+              <mat-error>
+                Campo obrigatório.
+              </mat-error>
+              }
+            }
+
         </mat-form-field>
         <mat-form-field>
           <mat-label for="email">Email</mat-label>
           <input  type="email" name="user_email" formControlName="email" matInput required>
+          @if (contactForm.controls['email'].errors && (formDir.submitted || contactForm.controls["email"].touched)) {
+            @if (contactForm.controls['email'].errors['required']) {
+            <mat-error>
+              Campo obrigatório.
+            </mat-error>
+            }
+            @if (contactForm.controls['email'].errors['email']) {
+              <mat-error>
+                E-mail inválido.
+              </mat-error>
+              }
+          }
         </mat-form-field>
         <mat-form-field>
           <mat-label for="message">Mensagem</mat-label>
           <textarea matInput type="text" name="message" formControlName="message" matInput required></textarea>
+          @if (contactForm.controls['message'].errors && (formDir.submitted || contactForm.controls["message"].touched)) {
+            @if (contactForm.controls['message'].errors['required']) {
+            <mat-error>
+              Campo obrigatório.
+            </mat-error>
+            }
+          }
         </mat-form-field>
-        <button  type="submit" mat-fab extended style="width: 140px; background-color: rgb(183, 104, 235); color: white;">
+        <button *ngIf="!(isLoading$ | async)"  type="submit" mat-fab extended style="width: 140px; background-color: rgb(183, 104, 235); color: white;">
           <mat-icon>send</mat-icon>
           Enviar
+        </button>
+
+        <button disabled="true" *ngIf="isLoading$ | async" mat-fab extended style="width: 140px; background-color: rgb(183, 104, 235); color: white;">
+          <mat-spinner diameter="25"></mat-spinner>
         </button>
       </form>
       <div class="social">
