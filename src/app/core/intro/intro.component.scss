@@ -59,7 +59,7 @@
 .button-projects{
   background:
     rgb(183, 104, 235);
-
+  border: none;
   background-size: 200% 100%; // Amplia o fundo para a animação de movimento
   animation: wave 5s linear infinite; // Animação de movimento de onda
   position: relative;
