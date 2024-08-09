@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-card-tecnologies',
   templateUrl: './card-tecnologies.component.html',
-  styleUrls: ['./card-tecnologies.component.css'],
+  styleUrls: ['./card-tecnologies.component.scss'],
   standalone: true,
 })
 export class CardTecnologiesComponent implements OnInit {

@@ -1,11 +1,9 @@
 <div class="container" [@foobar]="state">
   <div class="body">
     <div style="display: flex; justify-content: center;">
-      <div class="line"></div>
       <div style="display: flex;;">
         <h1 class="title-session1">Contatos</h1>
       </div>
-      <div class="line"></div>
     </div>
     <br>
     <br>
@@ -13,7 +11,7 @@
       <form [formGroup]="contactForm" class="form" #formDir="ngForm" (ngSubmit)="sendEmail($event)">
         <mat-form-field>
           <mat-label for="name">Nome</mat-label>
-          <input  type="text" name="user_name" formControlName="name" matInput required>
+          <input type="text" name="user_name" formControlName="name" matInput required>
             @if (contactForm.controls['name'].errors && (formDir.submitted || contactForm.controls["name"].touched)) {
               @if (contactForm.controls['name'].errors['required']) {
               <mat-error>
@@ -65,12 +63,12 @@
 
           <div style="display: flex;">
             <a href="https://www.linkedin.com/in/davi-azevedo-3a62361a5/" target="_blank">
-              <button mat-fab style="background-color: rgb(183, 104, 235)">
+              <button mat-fab class="button-contact">
                 <img src="assets/linkedin2.png" alt="App Icon" width="40" height="40">
               </button>
             </a>
             <a href="https://github.com/daviaze" target="_blank">
-              <button mat-fab style="margin-left: 10px; background-color: rgb(183, 104, 235)">
+              <button mat-fab class="button-contact" style="margin-left: 10px;">
                 <img src="assets/github2.png" alt="App Icon" width="40" height="40">
               </button>
             </a>

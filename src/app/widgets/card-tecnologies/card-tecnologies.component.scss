@@ -4,14 +4,19 @@ background-color: #27272A; border-radius: 10px 0 0 0;   border-bottom: 4px solid
 display: flex; flex-direction: column; justify-content: center; align-items: center;
 margin-left: 40px;
 margin-top: 20px;
-
 transition: transform 0.2s ease-in-out;
 
-&:hover {
-  transform: scale(1.20);
-}
+.title{
+  color:rgb(183, 104, 235);
+  &:hover{
+    color: aqua;
+  }
 }
 
-.title{
-  color: rgb(183, 104, 235);
+&:hover {
+  .title{
+    color: rgb(213, 165, 245);
+  }
+  transform: scale(1.20);
+}
 }
